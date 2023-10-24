@@ -24,15 +24,13 @@ public class uielements {
     }
 
     public String sendPrefix(String text){
-        String prefix =
-                (
-                    ChatColor.DARK_GRAY+"["
-                            + ChatColor.AQUA+ChatColor.BOLD+text
-                            + ChatColor.DARK_GRAY+"]"
-                            + ChatColor.AQUA+" • "
-                            + ChatColor.GRAY
-                );
 
-        return prefix;
+        return (
+            ChatColor.DARK_GRAY+"["
+                    + ChatColor.AQUA+ChatColor.BOLD+text
+                    + ChatColor.DARK_GRAY+"]"
+                    + ChatColor.AQUA+" • "
+                    + ChatColor.GRAY
+        );
     }
 }

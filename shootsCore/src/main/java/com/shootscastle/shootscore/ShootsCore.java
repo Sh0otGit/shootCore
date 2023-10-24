@@ -1,22 +1,23 @@
 package com.shootscastle.shootscore;
 
-import com.shootscastle.shootscore.Disasters.commands.QueueCommand;
-import com.shootscastle.shootscore.Global.Queue;
+import com.shootscastle.shootscore.Global.Game;
+import com.shootscastle.shootscore.Global.commands.QueueCommand;
+import com.shootscastle.shootscore.Global.commands.SetGameCommand;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class ShootsCore extends JavaPlugin {
 
     public String currentGame;
-    private Queue queue;
+    private Game game;
 
     @Override
     public void onEnable() {
-        this.queue = new Queue(1);
-        this.currentGame = "Disasters";
-        if(currentGame == "Disasters"){
-            getCommand("queue").setExecutor(new QueueCommand(this.queue));
-        }
+        this.game = new Game("none");
 
+        Objects.requireNonNull(getCommand("queue")).setExecutor(new QueueCommand(game));
+        Objects.requireNonNull(getCommand("setgame")).setExecutor(new SetGameCommand(game));
         // Plugin startup logic
 
     }

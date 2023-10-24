@@ -10,3 +10,6 @@ commands:
   queue:
     description: Queue for the current selected game.
     usage: /<command>
+  setgame:
+    description: Change the current game of the server.
+    usage: /<command>
