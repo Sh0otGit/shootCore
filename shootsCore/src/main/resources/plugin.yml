@@ -1,0 +1,12 @@
+name: ShootsCore
+version: '${project.version}'
+main: com.shootscastle.shootscore.ShootsCore
+api-version: 1.20
+prefix: [ shootsCore ]
+authors: [ Shoot ]
+description: Simple, lightweight core plugin for ShootsCastle.
+website: shootscastle.com
+commands:
+  queue:
+    description: Queue for the current selected game.
+    usage: /<command>
