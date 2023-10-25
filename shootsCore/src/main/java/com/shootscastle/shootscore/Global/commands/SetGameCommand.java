@@ -36,7 +36,8 @@ public class SetGameCommand implements CommandExecutor {
                     ui.sendError(player, "That is not a valid game name!");
                     return true;
                 case "disasters":
-                    this.game.setType("Disasters");
+                    this.game.setType("disasters");
+                    this.game.sendToGame(player);
             }
             player.sendMessage(ui.sendPrefix("SERVER")+"You set the server's current game to "+ ChatColor.GREEN + this.game.getType() + ChatColor.GRAY + "!");
             return true;
